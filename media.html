@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My media</title>
+  </head>
+  <body>
+    <a href="media.html">Media.html</a>
+    <a href="table.html">Table.html</a>
+    <header>
+      <h1>HTML media elements</h1>
+    </header>
+    <main>
+      <h3>Image media element</h3>
+      <img
+        src="assets/imageofjanet.jpeg"
+        alt="an image of myself"
+        width="300"
+      />
+
+      <hr />
+      <br />
+      <h3>Video media element</h3>
+      <video
+        controls
+        autoplay
+        loop
+        muted
+        preload="auto"
+        crossorigin="anonymous"
+        width="300"
+      >
+        <source src="assets/videoofjanet.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+
+      <hr />
+      <br />
+      <h3>Audio media element</h3>
+      <audio controls loop muted preload="auto" crossorigin="anonymous">
+        <source src="assets/Said.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <hr />
+      <br />
+      <h3>Picture media element</h3>
+      <p>The picture shown changes at different screen sizes</p>
+      <picture>
+        <source srcset="assets/Image1.jpeg" media="(min-width: 1024px)" />
+        <source
+          srcset="assets/Image2.jpeg"
+          media="(min-width: 768px) and (max-width: 1023px)"
+        />
+        <source srcset="assets/Image3.jpeg" media="(max-width: 767px)" />
+
+        <!-- Fallback image (if <picture> is not supported) -->
+        <img src="assets/Image2.jpeg" alt="Responsive example" width="400" />
+      </picture>
+    </main>
+  </body>
+</html>
